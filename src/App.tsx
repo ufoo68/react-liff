@@ -1,17 +1,13 @@
 import React from 'react'
 import './App.scss'
-import { Message } from '@line/bot-sdk'
+import { buildReplyText } from 'line-message-builder'
 
 const liff = window.liff
 
 const App: React.FC = () => {
   const sendMessage = () => {
     liff.init({ liffId: process.env.REACT_APP_LIFF_ID as string }).then(() => {
-      const message: Message = {
-        type: 'text',
-        text: 'Send Message'
-      }
-      liff.sendMessages([message])
+      liff.sendMessages(buildReplyText(['Send Message']))
     })
   }
   return (
