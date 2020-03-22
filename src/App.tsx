@@ -13,7 +13,7 @@ const App: React.FC = () => {
       liff
         .sendMessages(buildReplyText(['Send Message']))
         .then(() => {
-          console.log('message sent')
+          alert('message sent')
         })
         .catch(err => {
           alert(err)
