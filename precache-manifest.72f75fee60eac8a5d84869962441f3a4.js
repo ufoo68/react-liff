@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c34165a9434dfb3cd624dc1a5dcec154",
+    "revision": "fb612b249c62bb7cb8ceb326e961b3f8",
     "url": "/react-liff/index.html"
   },
   {
