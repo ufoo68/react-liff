@@ -8,7 +8,7 @@ const App: React.FC = () => {
   const sendMessage = () => {
     liff.init({ liffId: process.env.REACT_APP_LIFF_ID as string }).then(() => {
       if (!liff.isLoggedIn()) {
-        liff.login({ redirectUri: 'https://918c916c.ngrok.io' })
+        liff.login({})
       }
       liff
         .sendMessages(buildReplyText(['Send Message']))
@@ -16,7 +16,7 @@ const App: React.FC = () => {
           console.log('message sent')
         })
         .catch(err => {
-          console.log('error', err)
+          alert(err)
         })
     })
   }
